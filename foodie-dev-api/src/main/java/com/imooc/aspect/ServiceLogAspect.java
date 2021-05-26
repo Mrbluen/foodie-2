@@ -1,9 +1,10 @@
 package com.imooc.aspect;
 
-import org.aopalliance.intercept.Joinpoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Aspect
@@ -12,7 +13,6 @@ public class ServiceLogAspect {
 
     public static final Logger log =
             LoggerFactory.getLogger(ServiceLogAspect.class);
-
     /**
      * AOP通知：
      * 1. 前置通知：在方法调用之前执行
